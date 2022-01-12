@@ -1,0 +1,38 @@
+mysql> show tables;
++-----------------------+
+| Tables_in_task_planer |
++-----------------------+
+| planer_info_tbl       |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> desc planer_info_tbl;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int         | NO   | PRI | NULL    | auto_increment |
+| date    | varchar(20) | YES  |     | NULL    |                |
+| task    | varchar(20) | YES  |     | NULL    |                |
+| is_done | tinyint(1)  | YES  |     | 0       |                |
++---------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from planer_info_tbl;
++----+----------+--------------+---------+
+| id | date     | task         | is_done |
++----+----------+--------------+---------+
+|  1 | 1-1-2022 | Idea sharing |       0 |
+|  2 | 1-2-2022 | Brain Wash   |       0 |
++----+----------+--------------+---------+
+2 rows in set (0.01 sec)
+
+mysql> select * from planer_info_tbl;
++----+----------+--------------+---------+
+| id | date     | task         | is_done |
++----+----------+--------------+---------+
+|  1 | 1-1-2022 | Idea sharing |       1 |
+|  2 | 1-2-2022 | Brain Wash   |       0 |
++----+----------+--------------+---------+
+2 rows in set (0.00 sec)
+
+mysql>
